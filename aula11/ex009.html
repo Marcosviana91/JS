@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <H1>Onde você vive?</H1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="send" onclick="save()">
+    <div id="response"></div>
+    <script>
+        function save() {
+            //Criar Bloco
+            var resp = window.document.querySelector('input#txtpais').value
+            console.log(`Contém ${resp}`)
+            var nacionalidade
+            if (resp == 'Brasil') {
+                nacionalidade = 'Brasileiro'
+            }
+            else {
+                nacionalidade = 'estrangeiro'
+            }
+            console.log(`Você é ${nacionalidade}`)
+            window.document.getElementById('response').innerHTML = `Você é <strong>${nacionalidade}</strong>`
+        }
+    </script>
+</body>
+</html>

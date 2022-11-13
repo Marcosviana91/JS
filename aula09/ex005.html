@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1" />
+    <title>Primeiros passos com o DOM</title>
+    <style type="text/css" media="all">
+        body {
+            background-color: #6b7bff;
+            color: white;
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>
+        Aqui vai o resultado.
+    </p>
+    <p id="paragrafo2">
+        <strong>DOM</strong> Document Object Model
+    </p>
+    <p class="paragrafo3">
+        Aprendendo a usar <strong>DOM</strong> em Javascript.
+    </p>
+    <div name="div1">
+        Clique em mim.
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        p1 = window.document.getElementsByTagName('p')[0]//Retorna todos os elementos com tag <p>. Informe um índice
+        p1.style.color = 'blue' //aplica um valor (blue)a um parâmetro (color) na tag style do p1
+        p2 = window.document.getElementById('paragrafo2')
+        p2.innerText = 'Este é o segundo parágrafo. '//Substitui o texto dentro de p2
+        div1 = window.document.getElementsByName('div1')[0]
+        p3 = window.document.getElementsByClassName('paragrafo3')[0]
+        p3.style.background = '#0f0' 
+        seletor = window.document.querySelector('div')//querySelector() seleciona um elemento como em CSS.
+        window.navigator.vibrate(50)
+        window.document.write(`<br>Está escrito assim: ${seletor.innerText}`)
+    </script>
+</body>
+</html>

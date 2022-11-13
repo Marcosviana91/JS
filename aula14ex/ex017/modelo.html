@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Número:
+                <input type="number" name="numTabuada" id="numTabuada">
+                <input type="button" value="Gerar Tabuada" onclick="tabuada()">
+            </p>
+        </div>
+        <div>
+            <textarea name="tabuadatext" id="texttab" cols="15" rows="11" readonly>Tabuada</textarea>
+            <select name="tabuadasel" id="seltab" size="10">
+                <!--
+                    Para criar subitens pelo JS:
+                        let variável = document.createElement('option') //nome da TAG
+                    Para adicionar o texto que vai entre a TAG:
+                        variável.text = '' //string ou place holder
+                    Para adicionar parametros às TAGs //parametro value='item1'
+                        variável.value = 'item1'
+                    Por fim:
+                    ITEM.appendChild(variável)
+                <option value="item1">Valor 1</option>
+                <option value="item2">Valor 2</option>
+                -->
+            </select>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVídeo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
